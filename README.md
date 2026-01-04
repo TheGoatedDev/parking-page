@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Domain Parking Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, elegant parking page for owned domains. Built with React, TypeScript, and Tailwind CSS to provide a clean landing page for domains that are held but not yet in active use.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎨 **Modern Design** - Clean, professional interface with gradient backgrounds
+- 📱 **Fully Responsive** - Looks great on all devices
+- ⚡ **Fast & Lightweight** - Built with Vite for optimal performance
+- 🎭 **Customizable** - Easy to modify content and styling
+- 🔗 **Social Links** - Integrated social media links section
+- 📧 **Contact Section** - Clear call-to-action for domain inquiries
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** - Modern React with latest features
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Vite** - Next-generation frontend tooling
+- **Lucide React** - Beautiful icon set
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18+ 
+- pnpm (recommended package manager)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to project directory
+cd parking-page
+
+# Install dependencies
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Start development server
+pnpm dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build
+
+```bash
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
+## Customization
+
+### Update Content
+
+Edit the following components to customize your parking page:
+
+- `src/components/Header.tsx` - Header with brand name
+- `src/components/Hero.tsx` - Main headline and description
+- `src/components/ContactSection.tsx` - Contact information and CTA
+- `src/components/SocialLinks.tsx` - Social media links
+
+### Styling
+
+The project uses Tailwind CSS. Modify `tailwind.config.js` to customize the theme, or edit component classes directly.
+
+## Project Structure
+
+```
+parking-page/
+├── src/
+│   ├── components/      # React components
+│   │   ├── Header.tsx
+│   │   ├── Hero.tsx
+│   │   ├── ContactSection.tsx
+│   │   └── SocialLinks.tsx
+│   ├── App.tsx         # Main app component
+│   ├── main.tsx        # Entry point
+│   └── index.css       # Global styles
+├── public/             # Static assets
+└── package.json        # Dependencies and scripts
+```
+
+## Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build
+- `pnpm lint` - Run ESLint
+
+## License
+
+Private project - All rights reserved.
